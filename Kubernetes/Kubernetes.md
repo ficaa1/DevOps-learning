@@ -34,6 +34,7 @@
 ## Commands
 
 > kubectl run nginx --image=nginx --dry-run=client -o yaml > fichier.yaml
+
 > kubectl get po/deploy/svc/node/replicaset/... -o yaml > fichier.yaml
 
  
