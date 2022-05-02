@@ -8,7 +8,6 @@ User profiles :
 
 ---------------------
 **Table of contents**
-- [Shell commands](#shell-commands)
   - [Aliases](#aliases)
   - [History](#history)
   - [Variables](#variables)
