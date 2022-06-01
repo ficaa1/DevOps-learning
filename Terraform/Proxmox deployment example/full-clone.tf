@@ -1,36 +1,24 @@
 resource "proxmox_vm_qemu" "your-vm" {
     
     # VM General Settings
-    target_node = "your-proxmox-node"
-    vmid = "100"
-    name = "vm-name"
-    desc = "Description"
+    target_node = "labadmin1"
+    name = "harvester-pxeboot"
+    desc = "PXE boot Harvester"
 
     # VM Advanced General Settings
     onboot = true 
 
     # VM OS Settings
-    clone = "your-clone"  #Proxmox Template
-
-    # VM System Settings
-    agent = 1
-    
-    # VM CPU Settings
-    cores = 1
-    sockets = 1
-    cpu = "host"    
-    
-    # VM Memory Settings
-    memory = 1024
+    clone = "harvester-pxeboot"  #Proxmox Template
 
     # VM Network Settings
     network {
-        bridge = "vmbr0"
+        bridge = "vmbr2"
         model  = "virtio"
     }
 
     # VM Cloud-Init Settings
-    os_type = "cloud-init"
+    os_type = "centos"
 
     # (Optional) IP Address and Gateway
     # ipconfig0 = "ip=0.0.0.0/0,gw=0.0.0.0"
